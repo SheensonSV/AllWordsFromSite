@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Get words from site</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:8080/css/normalize.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/style.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/theme.css">
+    <script ENGINE="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script th:inline="javascript" ENGINE="text/javascript" src="http://localhost:8080/js/script.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__inner-txt">
+                <h1 class="header__title">get worlds from site</h1>
+            </div>
+            <form action="" class="header__inner-form">
+                <label class="header__inner-lbl">Введите адрес сайта
+                    <input class="header__inner-input" type="text">
+                </label>
+                <button class="header__inner-btn" type="submit">Анализировать сайт</button>
+            </form>
+        </div>
+    </div>
+    <div id="dataFromBack">
+
+        <div>
+            <ul>
+                <li th:value="${allWordsString}"></li>
+            </ul>
+        </div>
+<!--        <ul class="word_list">-->
+<!--            <li class="main-item" th:each="data : ${allWordsString}" th:data-id="${data.id}">-->
+<!--&lt;!&ndash;                <h4 name="nameOfDeal" th:text="${data.name}"></h4>&ndash;&gt;-->
+<!--                <p name="fullText" th:text="${data}"></p>-->
+<!--            </li>-->
+<!--        </ul>-->
+    </div>
+</header>
+
+</body>
+</html>
